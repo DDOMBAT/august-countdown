@@ -1,35 +1,72 @@
 
+html,body{
+    margin:0;
+    height:100%;
+}
+
 body{
-margin:0;
-background:#0b0b0b;
-color:white;
-font-family:Arial,sans-serif;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:url("Wildflower.jpg") center center/cover no-repeat;
+    overflow:hidden;
+    color:#fffdf7;
+    font-family:Inter,sans-serif;
 }
-.container{text-align:center}
-h1{font-size:4rem;letter-spacing:8px;margin:0}
-h2{color:#999;font-weight:400}
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.28);
+}
+
+.container{
+    position:relative;
+    z-index:1;
+    text-align:center;
+    padding:50px;
+    border-radius:24px;
+    background:rgba(255,255,255,.14);
+    backdrop-filter:blur(12px);
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+}
+
+h1{
+    font-family:"Playfair Display",serif;
+    font-size:5rem;
+    letter-spacing:10px;
+    margin:.2em 0;
+}
+
+h2{
+    font-family:"Playfair Display",serif;
+    color:#ffe9a8;
+    font-weight:500;
+}
+
 #countdown{
-display:flex;
-gap:25px;
-justify-content:center;
-margin:40px 0;
+    display:flex;
+    gap:28px;
+    justify-content:center;
+    margin:40px 0;
 }
+
 #countdown div{
-background:#1c1c1c;
-padding:20px;
-border-radius:12px;
-min-width:110px;
+    min-width:100px;
 }
+
 span{
-display:block;
-font-size:3rem;
-font-weight:bold;
+    display:block;
+    font-size:3rem;
+    font-weight:700;
 }
+
 small{
-color:#bbb;
-text-transform:uppercase;
+    text-transform:uppercase;
+    color:#f4e8c6;
+}
+
+.note{
+    font-size:.9rem;
+    opacity:.85;
 }
