@@ -7,9 +7,9 @@ html,body{
 body{
     display:flex;
     justify-content:center;
-    align-items:center;
+    align-items:flex-start;
     background:url("red-begonias.jpg") center center/cover no-repeat;
-    overflow:hidden;
+    overflow-y: auto;
     color:#fffdf7;
     font-family:Inter,sans-serif;
 }
@@ -17,14 +17,14 @@ body{
 .overlay{
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.28);
+    background:rgba(0,0,0,.30);
 }
 
 .container{
     position:relative;
     z-index:1;
     text-align:center;
-    padding:50px;
+    padding:100px;
     border-radius:24px;
     background:rgba(255,255,255,.14);
     backdrop-filter:blur(12px);
@@ -124,4 +124,38 @@ small{
     .note {
         display: none;
     }
+}
+
+/* Color list */
+#color-list {
+    list-style: none;
+    padding: 30px 0 0px 0;
+    margin: 0;
+}
+
+/* Each color */
+#color-list li {
+    position: relative;
+
+    font-size: 28px;
+    line-height: 1.35;
+
+    padding-left: 45px;
+}
+
+/* Big colored star */
+#color-list li::before {
+    content: "★";
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 30px;
+    line-height: 1;
+
+    /* inherits your JS-generated color */
+    color: currentColor;
 }
