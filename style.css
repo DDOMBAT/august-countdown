@@ -12,6 +12,8 @@ body{
     overflow-y: auto;
     color:#fffdf7;
     font-family:Inter,sans-serif;
+    background-size: 100% auto;
+    background-repeat: repeat-y;
 }
 
 .overlay{
